@@ -1,6 +1,5 @@
 const inquirer = require("inquirer");
 const mysql = require("mysql");
-const logTable = require("console.table");
 const db = require(".");
 
 const connection = mysql.createConnection({
@@ -32,7 +31,7 @@ function startScreen() {
                 "Add employee",
                 "View departments",
                 "View roles",
-                "view employees",
+                "View employees",
                 "Update employee role",
                 "Quit"
             ],
@@ -59,7 +58,7 @@ function startScreen() {
                     viewRoles();
                     break;
                 case "View employees":
-                    viewEmployee();
+                    viewEmployees();
                     break;
                 case "Update employee role":
                     updateEmployee();
@@ -93,7 +92,7 @@ function addRole() {
         },
         {
             type: "input",
-            message: "What is the salart for this role",
+            message: "What is the salary for this role",
             name: "salaryTotal"
         },
         {
@@ -180,7 +179,7 @@ function viewRoles() {
     });
 }
 
-function viewEmployee() {
+function viewEmployees() {
     let query = "SELECT * FROM employee";
     connection.query(query, function(err, res) {
         if (err) throw err;

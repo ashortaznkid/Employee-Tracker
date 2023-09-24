@@ -1,16 +1,18 @@
 {
   "dependencies": {
-    "inquirer": "^8.2.4",
-    "node": "^20.5.1"
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.6",
+    "mysql": "^2.18.1",
+    "node": "^20.5.1",
+    "node.js": "^0.0.1-security"
   },
   "scripts": {
     "start": "node server.js"
   },
   "name": "employee-tracker",
-  "description": "",
+  "description": "A mysql database that tracks employees department, role, and the manager. Does this thru command-line prompts to go through the menu with different options of viewing/adding to the database",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
